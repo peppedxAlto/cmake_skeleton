@@ -1,0 +1,37 @@
+﻿---
+BasedOnStyle: WebKit
+AccessModifierOffset: '-2'
+AllowAllParametersOfDeclarationOnNextLine: 'true'
+AllowShortBlocksOnASingleLine: 'true'
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortLoopsOnASingleLine: 'false'
+AllowShortCaseLabelsOnASingleLine: 'false'
+AlignTrailingComments: 'true'
+ColumnLimit: '80'
+IndentWidth: '2'
+IndentCaseLabels: true
+Language: Cpp
+TabWidth: '2'
+UseTab: Never
+SpaceBeforeParens: ControlStatements    
+# Force pointers to the type for C++.
+DerivePointerAlignment: false
+PointerAlignment: Left
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterEnum: true
+  AfterClass: true
+  AfterStruct: true
+  AfterFunction: true
+  AfterControlStatement: true
+  AfterExternBlock: true
+  AfterUnion: true
+  BeforeElse: false
+  BeforeCatch: false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+BreakConstructorInitializers: AfterColon
+
+
+

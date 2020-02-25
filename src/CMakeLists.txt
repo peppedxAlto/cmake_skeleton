@@ -1,0 +1,3 @@
+add_executable(helloProj main.cpp)
+target_link_libraries(helloProj PRIVATE project_options project_warnings)
+define_file_basename_for_sources(helloProj)
