@@ -1,3 +1,3 @@
 add_executable(helloProj main.cpp)
-target_link_libraries(helloProj PRIVATE project_options project_warnings)
+target_link_libraries(helloProj PRIVATE project_options project_warnings spdlog::spdlog)
 define_file_basename_for_sources(helloProj)

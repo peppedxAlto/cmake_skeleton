@@ -1,8 +1,6 @@
-
-#include <iostream>
-
-int main(void)
+#include "spdlog/spdlog.h"
+int main()
 {
-    std::cout << " TEST \n";
+    //Use the default logger (stdout, multi-threaded, colored)
+    spdlog::info("Hello, {}!", "World");
 }
-

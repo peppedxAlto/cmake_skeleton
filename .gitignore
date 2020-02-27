@@ -1,8 +1,8 @@
-build*/
-install*/
+/build*/
+/install*/
 /floatLogs/
-external/Qt
-tools/
+/external/Qt
+/tools/
 
 *.kdev4
 
@@ -40,8 +40,6 @@ tools/
 *.app
 
 .vscode/
-protocolNums
-
 CMakeLists\.txt\.user
 
 \.project

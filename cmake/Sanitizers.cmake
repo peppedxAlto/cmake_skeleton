@@ -11,12 +11,12 @@ function(enable_sanitizers project_name)
 
     set(SANITIZERS "")
 
-    option(ENABLE_SANITIZER_ADDRESS "Enable address sanitizer" FALSE)
+    option(ENABLE_SANITIZER_ADDRESS "Enable address sanitizer (incompatible with memory and thread)" FALSE)
     if(ENABLE_SANITIZER_ADDRESS)
       list(APPEND SANITIZERS "address")
     endif()
 
-    option(ENABLE_SANITIZER_MEMORY "Enable memory sanitizer" FALSE)
+    option(ENABLE_SANITIZER_MEMORY "Enable memory sanitizer (!needs instrumented libc++)" FALSE)
     if(ENABLE_SANITIZER_MEMORY)
       list(APPEND SANITIZERS "memory")
     endif()
