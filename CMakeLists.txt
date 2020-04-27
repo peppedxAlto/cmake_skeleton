@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.15 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 
 project(myproject CXX)
 include(cmake/StandardProjectSettings.cmake)
@@ -44,3 +44,9 @@ if(ENABLE_TESTING)
 endif()
 
 add_subdirectory(src)
+
+option(ENABLE_UNITY "Enable Unity builds of projects" OFF)
+if (ENABLE_UNITY)
+  # Add for any project you want to apply unity builds for
+  set_target_properties(helloProj PROPERTIES UNITY_BUILD ON)
+endif()
