@@ -1,8 +1,5 @@
 /build*/
 /install*/
-/floatLogs/
-/external/Qt
-/tools/
 
 *.kdev4
 
@@ -44,3 +41,5 @@ CMakeLists\.txt\.user
 
 \.project
 compile_commands.json
+.clangd
+
