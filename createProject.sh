@@ -27,6 +27,7 @@ find . | grep -v .git | grep -v createProject.sh | grep -v .vscode | cpio -pmd $
 cd $DEST_DIR
 
 sed -i "s/SKEL_PROJECT/$2_prj/g" "CMakeLists.txt"
+sed -i "s/SKEL_EXECUTABLE/$2/g" "CMakeLists.txt"
 cd src
 sed -i "s/SKEL_EXECUTABLE/$2/g" "CMakeLists.txt"
 

@@ -48,5 +48,5 @@ add_subdirectory(src)
 option(ENABLE_UNITY "Enable Unity builds of projects" OFF)
 if (ENABLE_UNITY)
   # Add for any project you want to apply unity builds for
-  set_target_properties(helloProj PROPERTIES UNITY_BUILD ON)
+  set_target_properties(SKEL_EXECUTABLE PROPERTIES UNITY_BUILD ON)
 endif()
