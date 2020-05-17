@@ -50,3 +50,13 @@ if (ENABLE_UNITY)
   # Add for any project you want to apply unity builds for
   set_target_properties(SKEL_EXECUTABLE PROPERTIES UNITY_BUILD ON)
 endif()
+
+include(CMakePackageConfigHelpers)
+
+write_basic_package_version_file(
+  SKEL_PROJECT.cmake
+VERSION 0.1.0
+COMPATIBILITY SameMajorVersion
+)
+
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/SKEL_PROJECT.cmake DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake )
