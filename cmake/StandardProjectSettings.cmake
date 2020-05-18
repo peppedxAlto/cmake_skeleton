@@ -8,14 +8,6 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
   set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
 endif()
 
-find_program(CCACHE ccache)
-if(CCACHE)
-  message("using ccache")
-  set(CMAKE_CXX_COMPILER_LAUNCHER ${CCACHE})
-else()
-  message("ccache not found cannot use")
-endif()
-
 # Generate compile_commands.json to make it easier to work with clang based tools
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
