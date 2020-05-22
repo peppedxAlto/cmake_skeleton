@@ -1,9 +1,6 @@
-add_library(doctest_main STATIC doctest_main.cpp)
-target_link_libraries(doctest_main PUBLIC doctest::doctest)
-
 add_executable(tests tests.cpp)
-target_link_libraries(tests PRIVATE project_warnings project_options
-doctest_main)
+target_link_libraries(tests PRIVATE project_options
+Catch2WithMain)
 
 ### automatically discover tests that are defined in catch based test files you
 ### can modify the unittests. TEST_PREFIX to whatever you want, or use different

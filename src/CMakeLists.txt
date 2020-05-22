@@ -1,7 +1,8 @@
 include(GNUInstallDirs)
 include(GenerateExportHeader)
 
-add_executable(SKEL_EXECUTABLE main.cpp)
+add_executable(SKEL_EXECUTABLE)
+target_sources(SKEL_EXECUTABLE PRIVATE main.cpp)
 target_link_libraries(SKEL_EXECUTABLE PRIVATE project_options project_warnings spdlog::spdlog)
 define_file_basename_for_sources(SKEL_EXECUTABLE)
 

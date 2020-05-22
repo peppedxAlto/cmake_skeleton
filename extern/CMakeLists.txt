@@ -21,7 +21,7 @@ find_package(Threads REQUIRED)
 FetchContent_Declare(
   extern_fmt
   GIT_REPOSITORY git@github.com:fmtlib/fmt.git
-  GIT_TAG        6b219a58db753ae415fbd76ac076ff90630764cd
+  GIT_TAG        297c3b2ed551a4989826fc8c4780bf533e964bd9
 )
 
 
@@ -59,21 +59,20 @@ endif()
 # SPDLOG
 #
 FetchContent_Declare(
-  extern_doctest
-  GIT_REPOSITORY https://github.com/onqtam/doctest.git
-  GIT_TAG        2.3.8
+  extern_catch
+  GIT_REPOSITORY https://github.com/catchorg/Catch2.git
+  GIT_TAG        v3.0.0-preview2
 )
 
 
-FetchContent_GetProperties(extern_doctest)
-if(NOT extern_doctest)
-  FetchContent_Populate(extern_doctest)
+FetchContent_GetProperties(extern_catch)
+if(NOT extern_catch)
+  FetchContent_Populate(extern_catch)
   add_subdirectory(
-    ${extern_doctest_SOURCE_DIR}
-    ${extern_doctest_BINARY_DIR}
+    ${extern_catch_SOURCE_DIR}
+    ${extern_catch_BINARY_DIR}
     EXCLUDE_FROM_ALL)
 endif()
-include (${extern_doctest_SOURCE_DIR}/scripts/cmake/doctest.cmake)
 
 
 message("INSTALLING DEPENDENCIES DONE")
