@@ -6,10 +6,6 @@ message("INSTALLING DEPENDENCIES")
 set(EXTERNAL_DIR ${CMAKE_CURRENT_LIST_DIR} CACHE PATH "")
 message(" EXTERNAL DIR " ${EXTERNAL_DIR})
 
-
-
-#
-
 # Prefer pthread over system thread - DEVONO stare prima del find_package!
 set(CMAKE_THREAD_PREFER_PTHREAD TRUE)
 set(THREADS_PREFER_PTHREAD_FLAG TRUE)
@@ -21,7 +17,7 @@ find_package(Threads REQUIRED)
 FetchContent_Declare(
   extern_fmt
   GIT_REPOSITORY git@github.com:fmtlib/fmt.git
-  GIT_TAG        297c3b2ed551a4989826fc8c4780bf533e964bd9
+  GIT_TAG        51bf9cfacb644659e5d9c7e6fe66396726f2f4f4 
 )
 
 
@@ -40,7 +36,7 @@ endif()
 FetchContent_Declare(
   extern_spdlog
   GIT_REPOSITORY https://github.com/gabime/spdlog.git
-  GIT_TAG        v1.6.0
+  GIT_TAG        v1.6.1
 )
 
 

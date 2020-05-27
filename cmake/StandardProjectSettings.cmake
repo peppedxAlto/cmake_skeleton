@@ -32,7 +32,7 @@ if(CMAKE_CXX_COMPILER_ID MATCHES ".*Clang")
 elseif(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
   add_compile_options(-fdiagnostics-color=always)
 else()
-  message(AUTHOR_WARNING "No colored compiler diagnostic set for '${CMAKE_CXX_COMPILER_ID}' compiler.")
+  message(STATUS "No colored compiler diagnostic set for '${CMAKE_CXX_COMPILER_ID}' compiler.")
 endif()
 
 # Helper function to add preprocesor definition of FILE_BASENAME to pass the filename without directory path for
