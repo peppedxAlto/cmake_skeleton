@@ -1,11 +1,18 @@
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 
-project(SKEL_PROJECT CXX)
+project(SKEL_PROJECT  VERSION 0.0.1 LANGUAGES CXX)
+message(STATUS "SKEL_PROJECT Version: ${PROJECT_VERSION} ") 
+
 include(cmake/StandardProjectSettings.cmake)
+
+#You need to set the dafaults to propagate to subdirectories
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Link this 'library' to set the c++ standard / compile-time options requested
 add_library(project_options INTERFACE)
-target_compile_features(project_options INTERFACE cxx_std_14)
+target_compile_features(project_options INTERFACE cxx_std_17)
 
 # Link this 'library' to use the warnings specified in CompilerWarnings.cmake
 add_library(project_warnings INTERFACE)

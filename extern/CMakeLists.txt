@@ -17,7 +17,7 @@ find_package(Threads REQUIRED)
 FetchContent_Declare(
   extern_fmt
   GIT_REPOSITORY git@github.com:fmtlib/fmt.git
-  GIT_TAG        51bf9cfacb644659e5d9c7e6fe66396726f2f4f4 
+  GIT_TAG        7.0.1 
 )
 
 
@@ -36,7 +36,7 @@ endif()
 FetchContent_Declare(
   extern_spdlog
   GIT_REPOSITORY https://github.com/gabime/spdlog.git
-  GIT_TAG        v1.6.1
+  GIT_TAG        v1.7.0
 )
 
 

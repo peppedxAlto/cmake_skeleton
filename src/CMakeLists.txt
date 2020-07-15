@@ -6,8 +6,8 @@ target_sources(SKEL_EXECUTABLE PRIVATE main.cpp)
 target_link_libraries(SKEL_EXECUTABLE PRIVATE project_options project_warnings spdlog::spdlog)
 define_file_basename_for_sources(SKEL_EXECUTABLE)
 
-
-generate_export_header(SKEL_EXECUTABLE)
+# add this only for libraries
+# generate_export_header(SKEL_EXECUTABLE)
 
 set_target_properties(SKEL_EXECUTABLE PROPERTIES SOVERSION 1 VERSION 1.0.0)
 target_compile_definitions(SKEL_EXECUTABLE PRIVATE PZ_ENABLE_ASSERTS)
