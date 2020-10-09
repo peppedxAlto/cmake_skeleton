@@ -22,7 +22,7 @@ fi
 
 
 
-find . | grep -v .git | grep -v createProject.sh | grep -v .vscode | cpio -pmd $DEST_DIR
+find . | grep -v "./.git" | grep -v createProject.sh | grep -v .vscode | cpio -pmd $DEST_DIR
 
 cd $DEST_DIR
 

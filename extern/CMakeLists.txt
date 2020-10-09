@@ -36,7 +36,7 @@ endif()
 FetchContent_Declare(
   extern_spdlog
   GIT_REPOSITORY https://github.com/gabime/spdlog.git
-  GIT_TAG        v1.8.0
+  GIT_TAG        v1.8.1
 )
 
 
@@ -57,7 +57,7 @@ endif()
 FetchContent_Declare(
   extern_catch
   GIT_REPOSITORY https://github.com/catchorg/Catch2.git
-  GIT_TAG        v3.0.0-preview2
+  GIT_TAG        v3.0.0-preview3
 )
 
 

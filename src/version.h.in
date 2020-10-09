@@ -1,0 +1,5 @@
+#cmakedefine BUILD_VERSION "@BUILD_VERSION@"
+
+#ifndef BUILD_VERSION
+#define BUILD_VERSION "unknown"
+#endif
