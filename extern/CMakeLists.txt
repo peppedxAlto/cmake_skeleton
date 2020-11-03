@@ -17,7 +17,7 @@ find_package(Threads REQUIRED)
 FetchContent_Declare(
   extern_fmt
   GIT_REPOSITORY git@github.com:fmtlib/fmt.git
-  GIT_TAG        7.0.3 
+  GIT_TAG        7.1.1 
 )
 
 
