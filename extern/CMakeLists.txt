@@ -17,18 +17,9 @@ find_package(Threads REQUIRED)
 FetchContent_Declare(
   extern_fmt
   GIT_REPOSITORY git@github.com:fmtlib/fmt.git
-  GIT_TAG        7.1.1 
+  GIT_TAG        7.1.2 
 )
-
-
-FetchContent_GetProperties(extern_fmt)
-if(NOT extern_fmt)
-  FetchContent_Populate(extern_fmt)
-  add_subdirectory(
-    ${extern_fmt_SOURCE_DIR}
-    ${extern_fmt_BINARY_DIR}
-    EXCLUDE_FROM_ALL)
-endif()
+FetchContent_MakeAvailable(extern_fmt)
 
 #
 # SPDLOG
@@ -38,18 +29,7 @@ FetchContent_Declare(
   GIT_REPOSITORY https://github.com/gabime/spdlog.git
   GIT_TAG        v1.8.1
 )
-
-
-FetchContent_GetProperties(extern_spdlog)
-if(NOT extern_spdlog)
-  FetchContent_Populate(extern_spdlog)
-  set(SPDLOG_FMT_EXTERNAL  ON CACHE INTERNAL "")
-  add_subdirectory(
-    ${extern_spdlog_SOURCE_DIR}
-    ${extern_spdlog_BINARY_DIR}
-    EXCLUDE_FROM_ALL)
-endif()
-
+FetchContent_MakeAvailable(extern_spdlog)
 
 #
 # SPDLOG
@@ -59,16 +39,6 @@ FetchContent_Declare(
   GIT_REPOSITORY https://github.com/catchorg/Catch2.git
   GIT_TAG        v3.0.0-preview3
 )
-
-
-FetchContent_GetProperties(extern_catch)
-if(NOT extern_catch)
-  FetchContent_Populate(extern_catch)
-  add_subdirectory(
-    ${extern_catch_SOURCE_DIR}
-    ${extern_catch_BINARY_DIR}
-    EXCLUDE_FROM_ALL)
-endif()
-
+FetchContent_MakeAvailable(extern_catch)
 
 message("INSTALLING DEPENDENCIES DONE")
