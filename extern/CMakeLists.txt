@@ -15,30 +15,30 @@ find_package(Threads REQUIRED)
 # FMT
 #
 FetchContent_Declare(
-  extern_fmt
-  GIT_REPOSITORY git@github.com:fmtlib/fmt.git
-  GIT_TAG        7.1.2 
-)
+	extern_fmt
+	GIT_REPOSITORY https://github.com/fmtlib/fmt.git
+	GIT_TAG        8.1.1
+	)
 FetchContent_MakeAvailable(extern_fmt)
 
 #
 # SPDLOG
 #
 FetchContent_Declare(
-  extern_spdlog
-  GIT_REPOSITORY https://github.com/gabime/spdlog.git
-  GIT_TAG        v1.8.1
-)
+	extern_spdlog
+	GIT_REPOSITORY https://github.com/gabime/spdlog.git
+	GIT_TAG        v1.10.0
+	)
 FetchContent_MakeAvailable(extern_spdlog)
 
 #
 # SPDLOG
 #
 FetchContent_Declare(
-  extern_catch
-  GIT_REPOSITORY https://github.com/catchorg/Catch2.git
-  GIT_TAG        v3.0.0-preview3
-)
+	extern_catch
+	GIT_REPOSITORY https://github.com/catchorg/Catch2.git
+	GIT_TAG        v3.0.1
+	)
 FetchContent_MakeAvailable(extern_catch)
 
 message("INSTALLING DEPENDENCIES DONE")
