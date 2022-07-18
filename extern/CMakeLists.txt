@@ -17,7 +17,7 @@ find_package(Threads REQUIRED)
 FetchContent_Declare(
 	extern_fmt
 	GIT_REPOSITORY https://github.com/fmtlib/fmt.git
-	GIT_TAG        8.1.1
+	GIT_TAG        9.0.0
 	)
 FetchContent_MakeAvailable(extern_fmt)
 
@@ -37,7 +37,7 @@ FetchContent_MakeAvailable(extern_spdlog)
 FetchContent_Declare(
 	extern_catch
 	GIT_REPOSITORY https://github.com/catchorg/Catch2.git
-	GIT_TAG        v3.0.1
+	GIT_TAG        v3.1.0
 	)
 FetchContent_MakeAvailable(extern_catch)
 
